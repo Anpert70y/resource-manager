@@ -1,1 +1,1 @@
-# resource-manager
+# Resource Manager
