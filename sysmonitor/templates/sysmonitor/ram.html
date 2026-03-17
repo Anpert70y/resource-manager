@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'sysmonitor/styles/ram.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>RAM</h1>
+        </header>
+        <nav class="flex-nav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'cpu_view' %}">CPU</a>
+            <a href="{% url 'ram_view' %}" class="active">RAM</a>
+            <a href="{% url 'drives_view' %}">Drives</a>
+            <a href="{% url 'sys_view' %}">System Info</a>
+        </nav>
+
+        <main>
+            <div class="container">
+                <div class="icon">
+                    <img src="https://www.svgrepo.com/show/510479/ram.svg" alt="RAM" class="icon">
+                </div>
+                <div class="info">
+                    <p>Total Memory: {{ memory }}GB</p>
+                    <p id="usedMem">Used Memory: {{ used_memory }}GB</p>
+                    <p id="freeMem">Free Memory: {{ free_memory }}GB</p>
+                    <p id="memUsage">Usage: {{ memory_usage }}%</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Alex Eduardo Molina Garcia - 202410130195</p>
+        </footer>
+
+        <script src="{% static 'sysmonitor/scripts/ram.js' %}" async defer></script>
+    </body>
+</html>

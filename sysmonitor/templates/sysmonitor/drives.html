@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'sysmonitor/styles/drives.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>Drives</h1>
+        </header>
+        <nav class="flex-nav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'cpu_view' %}">CPU</a>
+            <a href="{% url 'ram_view' %}">RAM</a>
+            <a href="{% url 'drives_view' %}" class="active">Drives</a>
+            <a href="{% url 'sys_view' %}">System Info</a>
+        </nav>
+
+        <main>
+            <div>
+                <div class="icon">
+                    <img src="https://www.svgrepo.com/show/509902/drive.svg" alt="Drive icon" class="icon">
+                </div>
+                <div class="info">
+                    <p>Name: {{ name }}</p>
+                    <p>Mountpoint: {{ mountpoint }}</p>
+                    <p>Filesystem: {{ filesystem }}</p>
+                    <p>Total Storage: {{ total_storage }}GB</p>
+                    <p id="usedStorage">Used Storage: {{ used_storage }}GB</p>
+                    <p id="freeStorage">Free Storage: {{ free_storage }}GB</p>
+                    <p id="usage">Drive Usage: {{ drive_usage }}%</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Alex Eduardo Molina Garcia - 202410130195</p>
+        </footer>
+
+        <script src="{% static 'sysmonitor/scripts/drives.js' %}" async defer></script>
+    </body>
+</html>
