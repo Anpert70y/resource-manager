@@ -21,7 +21,7 @@ setInterval(function () {
 }, 1000);
 
 function updateHTML(data) {
-    usedStorage.innerText = 'Used Storage: ' + data.usedStorage + 'GB';
-    freeStorage.innerText = 'Free Storage: ' + data.freeStorage + 'GB';
-    usage.innerText = 'Drive Usage: ' + data.driveUsage + '%';
+    usedStorage.innerText = 'Almacenamiento Usado: ' + data.usedStorage + 'GB';
+    freeStorage.innerText = 'Almacenamiento Disponible: ' + data.freeStorage + 'GB';
+    usage.innerText = 'Uso de la Unidad: ' + data.driveUsage + '%';
 }

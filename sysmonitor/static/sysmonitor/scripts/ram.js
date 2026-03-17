@@ -21,7 +21,7 @@ setInterval(function () {
 }, 1000);
 
 function updateHTML(data) {
-    usedMem.innerText = 'Used Memory: ' + data.usedMem + 'GB';
-    freeMem.innerText = 'Free Memory: ' + data.freeMem + 'GB';
-    usage.innerText = 'Usage: ' + data.memUsage + '%';
+    usedMem.innerText = 'Memoria Usada: ' + data.usedMem + 'GB';
+    freeMem.innerText = 'Memoria Disponible: ' + data.freeMem + 'GB';
+    usage.innerText = 'Uso: ' + data.memUsage + '%';
 }

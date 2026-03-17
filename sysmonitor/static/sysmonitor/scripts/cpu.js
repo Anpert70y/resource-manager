@@ -19,5 +19,5 @@ setInterval(function () {
 }, 1000);
 
 function updateHTML(data) {
-    usage.innerText = 'Usage: ' + data.cpuUsage + '%';
+    usage.innerText = 'Uso: ' + data.cpuUsage + '%';
 }

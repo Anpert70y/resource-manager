@@ -40,19 +40,19 @@ setInterval(function () {
 function updateHTML(data) {
     cpu.innerHTML = `<img src="https://www.svgrepo.com/show/529533/cpu.svg" alt="CPU" class="icon">
                 <h2>CPU</h2>
-                <p>Usage: ` + data.cpuUsage + `%</p>
-                <p>Physical Cores: ` + data.physCores + `</p>
-                <p>Logical Cores: ` + data.logicalCores + `</p>`;
+                <p>Uso: ` + data.cpuUsage + `%</p>
+                <p>Nucleos Físicos: ` + data.physCores + `</p>
+                <p>Nucleos Lógicos: ` + data.logicalCores + `</p>`;
 
     ram.innerHTML = `<img src="https://www.svgrepo.com/show/510479/ram.svg" alt="RAM" class="icon">
                 <h2>RAM</h2>
-                <p>Total Memory: ` + data.memory + `GB</p>
-                <p>Free Memory: ` + data.freeMem + `GB</p>
-                <p>Usage: ` + data.memUsage + `%</p>`;
+                <p>Memoria Total: ` + data.memory + `GB</p>
+                <p>Memoria Disponible: ` + data.freeMem + `GB</p>
+                <p>Uso: ` + data.memUsage + `%</p>`;
 
     drive.innerHTML = `<img src="https://www.svgrepo.com/show/509902/drive.svg" alt="Drive" class="icon">
-                <h2>Drive</h2>
-                <p>Total Storage: ` + data.totalStorage + `GB</p>
-                <p>Free Storage: ` + data.freeStorage + `GB</p>
-                <p>Usage: ` + data.driveUsage + `%</p>`;
+                <h2>Disco</h2>
+                <p>Almacenamiento Total: ` + data.totalStorage + `GB</p>
+                <p>Almacenamiento Disponible: ` + data.freeStorage + `GB</p>
+                <p>Uso: ` + data.driveUsage + `%</p>`;
 }

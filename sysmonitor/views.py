@@ -73,7 +73,7 @@ def cpu_view(request):
         cpu_usage = psutil.cpu_percent()
         img_url = ""
 
-        if "AMD" in cpu_info or "AMD" in cpu_vendor:
+        if "AMD" in cpu_info["brand_raw"] or "AMD" in cpu_vendor:
             img_url = "https://www.svgrepo.com/show/329916/amd.svg"
         elif "Intel" in cpu_info or 'Intel' in cpu_vendor:
             img_url = "https://www.svgrepo.com/show/473665/intel.svg"
@@ -110,18 +110,27 @@ def drives_view(request):
         drive_usage = psutil.disk_usage(drive_path)
         drives = psutil.disk_partitions()
         drive = None
+        drive_name = "Desconocido"
+        drive_mntpoint = "Desconocido"
+        drive_fs = "Desconocido"
 
         for d in drives:
             if d.mountpoint == drive_path:
                 drive = d
+                drive_name = drive.device if drive.device != None else "Unidad de Almacenamiento"
+                drive_mntpoint = drive.mountpoint if drive.mountpoint != None else "Desconocido"
+                drive_fs = drive.fstype if drive.fstype != None else "Desconocido"
+
+
+
 
     except Exception as e:
         return HttpResponse("An error has occured: {e}")
     
     return render(request, "sysmonitor/drives.html", {
-        'name' : drive.device,
-        'mountpoint' : drive.mountpoint,
-        'filesystem' : drive.fstype,
+        'name' : drive_name,
+        'mountpoint' : drive_mntpoint,
+        'filesystem' : drive_fs,
         'total_storage' : round(drive_usage.total/1024**3, 2),
         'used_storage' : round(drive_usage.used/1024**3, 2),
         'free_storage' : round(drive_usage.free/1024**3, 2),

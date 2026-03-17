@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Monitor de recursos - RAM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'sysmonitor/styles/ram.css' %}">
@@ -15,11 +15,11 @@
             <h1>RAM</h1>
         </header>
         <nav class="flex-nav">
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">Inicio</a>
             <a href="{% url 'cpu_view' %}">CPU</a>
             <a href="{% url 'ram_view' %}" class="active">RAM</a>
-            <a href="{% url 'drives_view' %}">Drives</a>
-            <a href="{% url 'sys_view' %}">System Info</a>
+            <a href="{% url 'drives_view' %}">Disco</a>
+            <a href="{% url 'sys_view' %}">Info. del Sistema</a>
         </nav>
 
         <main>
@@ -28,10 +28,10 @@
                     <img src="https://www.svgrepo.com/show/510479/ram.svg" alt="RAM" class="icon">
                 </div>
                 <div class="info">
-                    <p>Total Memory: {{ memory }}GB</p>
-                    <p id="usedMem">Used Memory: {{ used_memory }}GB</p>
-                    <p id="freeMem">Free Memory: {{ free_memory }}GB</p>
-                    <p id="memUsage">Usage: {{ memory_usage }}%</p>
+                    <p>Memoria Total: {{ memory }}GB</p>
+                    <p id="usedMem">Memoria Usada: {{ used_memory }}GB</p>
+                    <p id="freeMem">Memoria Disponible: {{ free_memory }}GB</p>
+                    <p id="memUsage">Uso: {{ memory_usage }}%</p>
                 </div>
             </div>
         </main>

@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Monitor de recursos - CPU</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'sysmonitor/styles/cpu.css' %}">
@@ -15,11 +15,11 @@
             <h1>CPU</h1>
         </header>
         <nav class="flex-nav">
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">Inicio</a>
             <a href="{% url 'cpu_view' %}" class="active">CPU</a>
             <a href="{% url 'ram_view' %}">RAM</a>
-            <a href="{% url 'drives_view' %}">Drives</a>
-            <a href="{% url 'sys_view' %}">System Info</a>
+            <a href="{% url 'drives_view' %}">Disco</a>
+            <a href="{% url 'sys_view' %}">Info. del sistema</a>
         </nav>
 
         <main>
@@ -29,11 +29,11 @@
                 </div>
                 <div class="info" id="info">
                     <p>CPU: {{ cpu_name }}</p>
-                    <p>Vendor: {{ cpu_vendor }}</p>
-                    <p>Physical Cores: {{ phys_cores }}</p>
-                    <p>Logical Cores: {{ logical_cores}}</p>
-                    <p>Frequency: {{ frequency }}GHz</p>
-                    <p id="currentUsage">Usage: {{ current_usage }}%</p>
+                    <p>Vendedor: {{ cpu_vendor }}</p>
+                    <p>Nucleos Físicos: {{ phys_cores }}</p>
+                    <p>Nucleos Lógicos: {{ logical_cores}}</p>
+                    <p>Frecuencia: {{ frequency }}GHz</p>
+                    <p id="currentUsage">Uso: {{ current_usage }}%</p>
                 </div>
             </div>
         </main>

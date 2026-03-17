@@ -5,21 +5,21 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Monitor de recursos - Unidad de Almacenamiento</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'sysmonitor/styles/drives.css' %}">
     </head>
     <body>
         <header>
-            <h1>Drives</h1>
+            <h1>Disco</h1>
         </header>
         <nav class="flex-nav">
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">Inicio</a>
             <a href="{% url 'cpu_view' %}">CPU</a>
             <a href="{% url 'ram_view' %}">RAM</a>
-            <a href="{% url 'drives_view' %}" class="active">Drives</a>
-            <a href="{% url 'sys_view' %}">System Info</a>
+            <a href="{% url 'drives_view' %}" class="active">Disco</a>
+            <a href="{% url 'sys_view' %}">Info. del Sistema</a>
         </nav>
 
         <main>
@@ -28,13 +28,13 @@
                     <img src="https://www.svgrepo.com/show/509902/drive.svg" alt="Drive icon" class="icon">
                 </div>
                 <div class="info">
-                    <p>Name: {{ name }}</p>
-                    <p>Mountpoint: {{ mountpoint }}</p>
-                    <p>Filesystem: {{ filesystem }}</p>
-                    <p>Total Storage: {{ total_storage }}GB</p>
-                    <p id="usedStorage">Used Storage: {{ used_storage }}GB</p>
-                    <p id="freeStorage">Free Storage: {{ free_storage }}GB</p>
-                    <p id="usage">Drive Usage: {{ drive_usage }}%</p>
+                    <p>Nombre: {{ name }}</p>
+                    <p>Punto de Montaje: {{ mountpoint }}</p>
+                    <p>Sistema de Archivos: {{ filesystem }}</p>
+                    <p>Almacenamiento Total: {{ total_storage }}GB</p>
+                    <p id="usedStorage">Almacenamiento Usado: {{ used_storage }}GB</p>
+                    <p id="freeStorage">Almacenamiento Disponible: {{ free_storage }}GB</p>
+                    <p id="usage">Uso de la Unidad: {{ drive_usage }}%</p>
                 </div>
             </div>
         </main>

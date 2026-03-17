@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Resource Monitor</title>
+        <title>Monitor de recursos</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'sysmonitor/styles/index.css' %}">
@@ -15,41 +15,41 @@
             <h1>Monitor de recursos</h1>
         </header>
         <nav class="flex-nav">
-            <a href="{% url 'index' %}" class="active">Home</a>
+            <a href="{% url 'index' %}" class="active">Inicio</a>
             <a href="{% url 'cpu_view' %}">CPU</a>
             <a href="{% url 'ram_view' %}">RAM</a>
-            <a href="{% url 'drives_view' %}">Drives</a>
-            <a href="{% url 'sys_view' %}">System Info</a>
+            <a href="{% url 'drives_view' %}">Disco</a>
+            <a href="{% url 'sys_view' %}">Info. del Sistema</a>
         </nav>
         <main>
             <div class="container">
                 <div class="card" id="cpu">
                     <img src="https://www.svgrepo.com/show/529533/cpu.svg" alt="CPU" class="icon">
                     <h2>CPU</h2>
-                    <p>Usage: {{ cpuUsage }}%</p>
-                    <p>Physical Cores: {{ physCores }}</p>
-                    <p>Logical Cores: {{ logicalCores }}</p>
+                    <p>Uso: {{ cpuUsage }}%</p>
+                    <p>Nucleos Físicos: {{ physCores }}</p>
+                    <p>Nucleos Lógicos: {{ logicalCores }}</p>
                 </div>
                 <div class="card" id="ram">
                     <img src="https://www.svgrepo.com/show/510479/ram.svg" alt="RAM" class="icon">
                     <h2>RAM</h2>
-                    <p>Total Memory: {{ memory }}GB</p>
-                    <p>Free Memory: {{ freeMem }}GB</p>
-                    <p>Usage: {{ memUsage }}%</p>
+                    <p>Memoria Total: {{ memory }}GB</p>
+                    <p>Memoria Disponible: {{ freeMem }}GB</p>
+                    <p>Uso: {{ memUsage }}%</p>
                 </div>
                 <div class="card" id="drive">
                     <img src="https://www.svgrepo.com/show/509902/drive.svg" alt="Drive" class="icon">
-                    <h2>Drive</h2>
-                    <p>Total Storage: {{ totalStorage }}GB</p>
-                    <p>Free Storage: {{ freeStorage }}GB</p>
-                    <p>Usage: {{ driveUsage }}%</p>
+                    <h2>Disco</h2>
+                    <p>Almacenamiento Total: {{ totalStorage }}GB</p>
+                    <p>Almacenamiento Disponible: {{ freeStorage }}GB</p>
+                    <p>Uso: {{ driveUsage }}%</p>
                 </div>
                 <div class="card" id="os">
                     <img src="https://www.svgrepo.com/show/506814/computer.svg" alt="OS" class="icon">
-                    <h2>System Info</h2>
-                    <p>OS: {{ osName }}</p>
-                    <p>OS Version: {{ osVersion }}</p>
-                    <p>Architecture: {{ arch }}</p>
+                    <h2>Info. del Sistema</h2>
+                    <p>SO: {{ osName }}</p>
+                    <p>Versión del SO: {{ osVersion }}</p>
+                    <p>Arquitectura: {{ arch }}</p>
                 </div>
             </div>
         </main>

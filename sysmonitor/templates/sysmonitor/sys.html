@@ -5,21 +5,21 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Monitor de recursos - Información del Sistema</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'sysmonitor/styles/sys.css' %}">
     </head>
     <body>
         <header>
-            <h1>System Information</h1>
+            <h1>Información del Sistema</h1>
         </header>
         <nav class="flex-nav">
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">Inicio</a>
             <a href="{% url 'cpu_view' %}">CPU</a>
             <a href="{% url 'ram_view' %}">RAM</a>
-            <a href="{% url 'drives_view' %}">Drives</a>
-            <a href="{% url 'sys_view' %}" class="active">System Info</a>
+            <a href="{% url 'drives_view' %}">Disco</a>
+            <a href="{% url 'sys_view' %}" class="active">Info. del Sistema</a>
         </nav>
 
         <main>
@@ -28,10 +28,10 @@
                     <img src="{{ img_url }}" alt="OS" width="250vw" height="250vw">
                 </div>
                 <div class="info" id="info">
-                    <p>OS: {{ os_name }}</p>
-                    <p>OS Version: {{ os_version }}</p>
-                    <p>Architecture: {{ arch }}</p>
-                    <p>Boot Time: {{ boot_time }}</p>
+                    <p>SO: {{ os_name }}</p>
+                    <p>Versión del SO: {{ os_version }}</p>
+                    <p>Arquitectura: {{ arch }}</p>
+                    <p>Tiempo de Arranque: {{ boot_time }}</p>
                 </div>
             </div>
         </main>
