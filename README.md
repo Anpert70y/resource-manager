@@ -42,6 +42,11 @@ pip install django
 pip install psutil
 pip install py-cpuinfo
 ```
+En caso de haber clonado ya el repositorio o haber descargado el archivo requirements.txt, simplemente se puede utilizar pip junto con el archivo requirements.txt para hacer menos extenso el proceso:
+
+```
+pip install -r requirements.txt
+```
 
 Al tener Python y todas las librerias instaladas, se clona el repositorio:
 
