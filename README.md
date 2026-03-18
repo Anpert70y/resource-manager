@@ -65,7 +65,7 @@ docker build -t sysmonitor
 docker run -d sysmonitor -p 8000:8000
 ```
 
-### Pull del paquete con Docker
+### Pull de la imagen de Docker
 
 ```
 docker pull ghcr.io/anpert70y/resource-manager:latest
