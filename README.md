@@ -31,7 +31,30 @@ Muestra el nombre del sistema operativo junto a su version, versión de lanzamie
 
 ## Instalación
 
-Hay dos formas de ejecutar la aplicación:
+Hay varias formas de ejecutar la aplicación:
+
+### Clonar repositorio y ejecutar con Python
+
+Dado que Docker actua como un ambiente aislado (virtualización), este metodo es recomendado para que toda la información del sistema físico se muestre correctamente. Para ejecutar la aplicación de esta manera, es necesario tener instalado Python en el sistema e instalar las siguientes librerías:
+
+```
+pip install django
+pip install psutil
+pip install py-cpuinfo
+```
+
+Al tener Python y todas las librerias instaladas, se clona el repositorio:
+
+```
+git clone https://github.com/anpert70y/resource-manager.git
+cd resource-manager
+```
+
+Para luego iniciar el servidor y la aplicación por medio del archivo manage.py:
+
+```
+python manage.py runserver 0.0.0.0:8000
+```
 
 ### Clonar repositorio y crear imagen con Docker
 
@@ -50,6 +73,6 @@ docker tag ghcr.io/anpert70y/resource-manager:latest sysmonitor:latest
 docker run -d sysmonitor:latest -p 8000:8000
 ```
 
-Luego de esto, la aplicación estara disponible en localhost:8000.
+Luego de usar cualquiera de estos métodos, la aplicación estara disponible en localhost:8000.
 
 
