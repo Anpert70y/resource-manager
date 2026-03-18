@@ -1,3 +1,5 @@
+Hecho individualmente por: Alex Eduardo Molina Garcia con N° de cuenta 202410130195 para la clase de Arquitectura de Computadoras
+
 <img width="1854" height="876" alt="image" src="https://github.com/user-attachments/assets/cc6b7a5f-c7c5-4d8a-9436-4834de4df41a" />
 
 # Sysmonitor
