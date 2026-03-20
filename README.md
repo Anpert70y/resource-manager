@@ -78,6 +78,6 @@ docker tag ghcr.io/anpert70y/resource-manager:latest sysmonitor:latest
 docker run -d sysmonitor:latest -p 8000:8000
 ```
 
-Luego de usar cualquiera de estos métodos, la aplicación estara disponible en localhost:8000.
+Luego de usar cualquiera de estos métodos, la aplicación estara disponible en localhost:8000/sysmonitor/.
 
 
